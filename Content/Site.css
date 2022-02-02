@@ -1,0 +1,40 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*My Styles*/
+
+.navbar-inverse {
+    background-color: #990000 !important;
+    /*    background-color: #28a745 !important;
+*/
+}
+
+a.mynav {
+    background-color: #990000 !important;
+    /*    background-color: #28a745 !important;
+*/
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+

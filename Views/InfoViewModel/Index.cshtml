@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Code_First_Jashim.ViewModel.InfoViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Liberian Info</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LiberianName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LiberianName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LiberianID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LiberianID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LiberianID })
+        </td>
+    </tr>
+}
+
+</table>

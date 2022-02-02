@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Code_First_Jashim.Models.Liberian>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LiberianName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LiberianName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LiberianID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LiberianID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LiberianID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model Code_First_Jashim.Models.ReservedBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReservedBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookCategories.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookCategories.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfBooks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfBooks)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

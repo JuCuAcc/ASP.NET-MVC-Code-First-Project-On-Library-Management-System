@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Library</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Library", "Index", "Home", new { area = "" }, new { @class = "navbar-brand active" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("Home", "Index", "Home"                       )       </li>
+                    <li>@Html.ActionLink("Book Categories ", "Index", "BookCategories" )       </li>
+                    <li>@Html.ActionLink("Books", "Index", "Books"                     )       </li>
+                    <li>@Html.ActionLink("Teachers", "Index", "Teachers"               )       </li>
+                    @*<li>@Html.ActionLink("Liberian", "Index", "Liberian"             )       </li>*@
+                    <li>@Html.ActionLink("Liberian", "Index", "InfoViewModel")                 </li>
+                    @*<li>@Html.ActionLink("Book Issue ", "Index", "BookIssues"        )       </li>*@
+                    <li>@Html.ActionLink("Students", "Index", "Students")                      </li>
+                    <li>@Html.ActionLink("Reserved Book", "Index", "ReservedBooks"     )       </li>
+                    <li>@Html.ActionLink("Book Issue Log", "Index", "BookIssueLogs"    )       </li>
+                    <li>@Html.ActionLink("Fine Records", "Index", "FineRecords"        )       </li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home", new { @class = "mynav nav-item active" })                             </li>
+                    <li>@Html.ActionLink("Book Categories ", "Index", "BookCategories", new { @class = "mynav nav-item active" })       </li>
+                    <li>@Html.ActionLink("Books", "Index", "Books", new { @class = "mynav nav-item active" })                           </li>
+                    <li>@Html.ActionLink("Teachers", "Index", "Teachers", new { @class = "mynav nav-item active" })                     </li>
+                    <li>@Html.ActionLink("Liberian", "Index", "Liberians", new { @class = "mynav nav-item active" })                    </li>
+                    <li>@Html.ActionLink("Book Issue ", "Index", "BookIssues", new { @class = "mynav nav-item active" })                </li>
+                    <li>@Html.ActionLink("Reserved Book", "Index", "ReservedBooks", new { @class = "mynav nav-item active" })           </li>
+                    <li>@Html.ActionLink("Book Issue Log", "Index", "BookIssueLogs", new { @class = "mynav nav-item active" })          </li>
+                    <li>@Html.ActionLink("Fine Records", "Index", "FineRecords", new { @class = "mynav nav-item active" })              </li>*@
+
+
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Library</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
